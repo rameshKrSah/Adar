@@ -1,6 +1,6 @@
 # Adar : Adversarial Activity Recognition in Wearables
 
-This repository has the code and data related to the experiments we did in our paper [Adar : Adversarial Activity 
+This repository has the code and data for the experiments we did in our paper [Adar : Adversarial Activity 
 Recognition in Wearables](http://epsl.eecs.wsu.edu/wp-content/uploads/2019/07/Adar_Adversarial_Activity_Recognition_in_Wearables_ICCAD_2019.pdf)
 
 
