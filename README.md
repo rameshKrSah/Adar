@@ -10,7 +10,7 @@ Recognition in Wearables](http://epsl.eecs.wsu.edu/wp-content/uploads/2019/07/Ad
 	2. TensorFlow version 1.12.0
 	3. Numpy, Pandas and other tools. 
 
-The best way to get these tools is to use the [Anaconda](www.anaconda.com)
+The best way to get these tools is to use the [Anaconda](https://www.anaconda.com)
 
 # Execution
 * To run the experiments you can either use the provided pre-trained models and processed data. To do this just run the 
