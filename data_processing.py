@@ -19,6 +19,8 @@ import os
 import pickle
 import numpy as np
 import pandas as pd
+from tensorflow import keras
+
 
 data_folder = "data/UCI/"
 
@@ -118,15 +120,29 @@ def load_window_data():
     pickle.dump([train_data, y_train, test_data, y_test], file)
     file.close()
     
-    
-if __name__ == '__main__':
-    # Read the feature data, process it into proper format, and save it as a pickle
-    load_feature_data()
-    
-    # Read the window data, process it into proper format, and save it as a pickle
-    load_window_data()
-    
-    
+def load_saved_feature_data():
+	feature_data_file = "resources/UCI_Feature_Data.pickle"
+	file = open(feature_data_file, 'rb')
+	f_x_train, f_y_train, f_x_test, f_y_test = pickle.load(file)
+	file.close()
+	return f_x_train, f_y_train, f_x_test, f_y_test
+	
+def load_saved_window_data():
+	window_data_file = "resources/UCI_Window_Data.pickle"
+	file = open(window_data_file, 'rb')
+	w_x_train, w_y_train, w_x_test, w_y_test = pickle.load(file)
+	file.close()
+	return w_x_train, w_y_train, w_x_test, w_y_test
+
+def load_saved_dnn_model():
+	dnn_model_file = "resources/UCI_Feature_Model.h5py"
+	return keras.models.load_model(dnn_model_file)
+	
+def load_saved_cnn_model():
+	cnn_model_file = "resources/UCI_Window_Model.h5py"
+	return keras.models.load_model(cnn_model_file)
+	
+
     
     
     
